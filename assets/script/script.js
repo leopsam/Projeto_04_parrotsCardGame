@@ -116,6 +116,8 @@ const cartasSelecionada = [];
 let contador = 0;
 let primeiraCarta = '';
 let segundaCarta = '';
+let clicks = 0;
+let contandoFim = 0;
 let resposta = Number(prompt("Escolha um número de cartas que seja de 4 a 14, que seja par"))
 let respostaCerta = false
 
@@ -152,6 +154,7 @@ function inserirCartas() {
   function virarCarta(carta) {
     carta.classList.toggle('virada');
     contador++;
+    clicks++;
 
     if(primeiraCarta === ''){
         primeiraCarta = carta.querySelector('.back-face img')
@@ -167,27 +170,21 @@ function inserirCartas() {
         contador = 0;
 
     if(primeiraCarta === segundaCarta){
-        console.log('acertou')
-        console.log(primeiraCarta)
-        console.log(segundaCarta)
-
-        
+        //acertou!
+       
         acertoConfirmado()
         setTimeout(zerar, 1000);
 
-
-       
     } else {
-        console.log('errou')
-        console.log(primeiraCarta)
-        console.log(segundaCarta)
+        //errou!
+        setTimeout(desvirar, 1000);
+        setTimeout(zerar, 1000);        
+    }
+    }
 
-        
-        setTimeout(desvirar, 2000);
-        setTimeout(zerar, 1000);
-        
-    }
-    }
+    if(contandoFim == resposta){
+        alert(`Você ganhou em ${clicks} jogadas!`)
+      }
     
   }
 
@@ -207,15 +204,17 @@ function inserirCartas() {
   function acertoConfirmado(){
     const cartasFront = document.querySelectorAll('.virada .front-face');
     const cartasBack = document.querySelectorAll('.virada .back-face');
+    contandoFim += 2;
+    console.log(contandoFim)
 
     for( let i = 0; i < cartasFront.length; i++){
         cartasFront[i].classList.remove('front-face');
     }
     for( let i = 0; i < cartasBack.length; i++){
         cartasBack[i].classList.remove('back-face');
+        cartasBack[i].classList.add('conta');
+        
+
     }
-
-
-    console.log(cartasFront)
-    console.log(cartasBack)
   }
+
