@@ -113,6 +113,7 @@ const cartas = [
     </div>`,
 ];
 const cartasSelecionada = [];
+const tempo = document.querySelector('.tempo');
 let contador = 0;
 let primeiraCarta = '';
 let segundaCarta = '';
@@ -120,6 +121,10 @@ let clicks = 0;
 let contandoFim = 0;
 let resposta = Number(prompt("Escolha um número de cartas que seja de 4 a 14, que seja par"))
 let respostaCerta = false
+let reiniciar = '';
+let contaTempo;
+
+setInterval(startTempo, 1000);
 
 function comparador() { 
 	return Math.random() - 0.5; 
@@ -136,7 +141,8 @@ if((resposta % 2 == 1) || (resposta < 4) || (resposta > 14)){
         cartasSelecionada.push(cartas[i]);       
     }
 
-    inserirCartas()   
+    inserirCartas()  
+      
 }
 }    
 
@@ -183,7 +189,18 @@ function inserirCartas() {
     }
 
     if(contandoFim == resposta){
-        alert(`Você ganhou em ${clicks} jogadas!`)
+        reiniciar = prompt(`
+        Você ganhou em ${clicks} jogadas!
+        Seu tempo foi: ${contaTempo} segundos!
+        Gostaria de reiniciar a partida?
+        -------  sim  /  não -------`)
+        console.log(reiniciar )       
+    }
+
+      if(reiniciar === 'sim'){
+        window.location.reload();
+      }else if(reiniciar === 'não'){
+        alert('Obigado por jogar')
       }
     
   }
@@ -218,3 +235,9 @@ function inserirCartas() {
     }
   }
 
+  function startTempo(){
+    
+      contaTempo = Number(tempo.innerHTML);
+      tempo.innerHTML = contaTempo+1
+        
+  }

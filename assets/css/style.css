@@ -13,6 +13,19 @@ h1{
     text-align: center;
     margin: 25px;
 }
+
+.relogio{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.004em;
+    color: #75B79E;
+    text-align: right;
+    margin: 5px;
+    padding-right: 40px;
+
+}
 .tabuleiro{
     display: flex;
     justify-content: center;
