@@ -21,33 +21,48 @@ h1{
     margin: 0 auto;
 
 }
-.carta{   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 117px;
-    height: 146px;
-    background: #A7E9AF;
-    border: 1px solid #99CEA8;
-    border-radius: 5px;
-    margin: 10px;
-    transition: all 1s;
-}
+
 .carta img{    
     width: 100px;
     height: 100px;
 }
 
-.virada{
+.carta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 117px;
+    height: 146px;
+    position: relative;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    margin: 10px;
+  }  
+  
+  .face {
+    width: 100%;
+    height: 100%;
+    background-color: #a7e9af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+  }
+  
+  .back-face {
     transform: rotateY(180deg);
-}
-
-.invisivel{
-    display: none;
-}
-
-
-
+  }
+ 
+  .virada .back-face {
+    transform: rotateY(0deg);
+  }
+  
+  .virada .front-face {
+    transform: rotateY(-180deg);
+  }
 
 
 @media screen and (max-width: 767px){

@@ -1,67 +1,127 @@
 const cartas = [
-    `<div onclick="virar(this)" class="carta carta1">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/bobrossparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta1" src="./assets/img/bobrossparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta1">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/bobrossparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta1" src="./assets/img/bobrossparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta2">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/explodyparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta2" src="./assets/img/explodyparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta2">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/explodyparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta2" src="./assets/img/explodyparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta3">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/fiestaparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta3" src="./assets/img/fiestaparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta3">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/fiestaparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta3" src="./assets/img/fiestaparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta4">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/metalparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta4" src="./assets/img/metalparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta4">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/metalparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta4" src="./assets/img/metalparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta5">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/revertitparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta5" src="./assets/img/revertitparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta5">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/revertitparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta5" src="./assets/img/revertitparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta6">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/tripletsparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta6" src="./assets/img/tripletsparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta6">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/tripletsparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta6" src="./assets/img/tripletsparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta7">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/unicornparrot.gif" /> 
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta7" src="./assets/img/unicornparrot.gif" /> 
+        </div>
     </div>`,
-    `<div onclick="virar(this)" class="carta carta7">
-        <img class="frente" src="./assets/img/back.png" />
-        <img class="verso invisivel"src="./assets/img/unicornparrot.gif" /> 
-    </div>`
+    `<div class="carta" onclick="virarCarta(this)">
+        <div class="front-face face">
+            <img src="./assets/img/back.png" />
+        </div>
+        <div class="back-face face">
+            <img class="carta7" src="./assets/img/unicornparrot.gif" /> 
+        </div>
+    </div>`,
 ];
-
 const cartasSelecionada = [];
-
+let contador = 0;
+let primeiraCarta = '';
+let segundaCarta = '';
 let resposta = Number(prompt("Escolha um número de cartas que seja de 4 a 14, que seja par"))
 let respostaCerta = false
 
+function comparador() { 
+	return Math.random() - 0.5; 
+}
 
 while(respostaCerta == false){
 if((resposta % 2 == 1) || (resposta < 4) || (resposta > 14)){
@@ -78,12 +138,8 @@ if((resposta % 2 == 1) || (resposta < 4) || (resposta > 14)){
 }
 }    
 
-console.log(cartas)
-console.log(cartasSelecionada)
-
 function inserirCartas() {
     const carta = document.querySelector('.tabuleiro')
-    console.log(carta)
     cartasSelecionada.sort(comparador);
     for (let i=0; resposta>i; i++) {
         
@@ -93,19 +149,73 @@ function inserirCartas() {
     
 }
 
-function virar(elemento){
-    elemento.classList.toggle("virada")
-    console.log(elemento)
+  function virarCarta(carta) {
+    carta.classList.toggle('virada');
+    contador++;
 
-    const cartaFrente = elemento.querySelector('.frente')
-    cartaFrente.classList.toggle('invisivel');
+    if(primeiraCarta === ''){
+        primeiraCarta = carta.querySelector('.back-face img')
+        primeiraCarta = primeiraCarta.classList[0]
 
-    const cartaVerso = elemento.querySelector('.verso')
-    cartaVerso.classList.toggle('invisivel');
+    } else if(segundaCarta === ''){
+        segundaCarta = carta.querySelector('.back-face img')
+        segundaCarta = segundaCarta.classList[0]
 
+    }
+    
+    if (contador == 2){
+        contador = 0;
+
+    if(primeiraCarta === segundaCarta){
+        console.log('acertou')
+        console.log(primeiraCarta)
+        console.log(segundaCarta)
+
+        
+        acertoConfirmado()
+        setTimeout(zerar, 1000);
+
+
+       
+    } else {
+        console.log('errou')
+        console.log(primeiraCarta)
+        console.log(segundaCarta)
+
+        
+        setTimeout(desvirar, 2000);
+        setTimeout(zerar, 1000);
+        
+    }
+    }
+    
   }
 
+  function desvirar(){
+    const cartas = document.querySelectorAll('.virada');
+    for( let i = 0; i < cartas.length; i++){
+        cartas[i].classList.remove('virada');
+    }
+   
+  }
 
-  function comparador() { 
-	return Math.random() - 0.5; 
-}
+  function zerar(){
+    primeiraCarta = '';
+    segundaCarta = '';
+  }
+
+  function acertoConfirmado(){
+    const cartasFront = document.querySelectorAll('.virada .front-face');
+    const cartasBack = document.querySelectorAll('.virada .back-face');
+
+    for( let i = 0; i < cartasFront.length; i++){
+        cartasFront[i].classList.remove('front-face');
+    }
+    for( let i = 0; i < cartasBack.length; i++){
+        cartasBack[i].classList.remove('back-face');
+    }
+
+
+    console.log(cartasFront)
+    console.log(cartasBack)
+  }
